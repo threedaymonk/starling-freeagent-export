@@ -1,17 +1,15 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "starling/freeagent/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "starling-freeagent"
-  spec.version       = Starling::Freeagent::VERSION
+  spec.version       = '0.0.1'
   spec.authors       = ["Paul Battley"]
   spec.email         = ["pbattley@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Starling to FreeAgent exporter}
+  spec.description   = %q{Export transactions from Starling for FreeAgent import}
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
