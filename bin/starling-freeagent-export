@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'csv'
+require 'date'
+require 'bundler'
+Bundler.require
+
+starling = Starling::Client.new(
+  access_token: ENV.fetch('STARLING_ACCESS_TOKEN')
+)
+
+output = CSV.new($stdout)
+
+starling.transactions.list.take(50).each do |txn|
+  timestamp = txn.created.strftime('%d/%m/%Y')
+  amount = '%.2f' % txn.amount
+  description = txn.narrative
+  output << [timestamp, amount, description]
+end
+
