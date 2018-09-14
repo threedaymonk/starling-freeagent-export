@@ -2,8 +2,7 @@
 
 require 'csv'
 require 'date'
-require 'bundler'
-Bundler.require
+require 'starling'
 
 starling = Starling::Client.new(
   access_token: ENV.fetch('STARLING_ACCESS_TOKEN')
