@@ -14,5 +14,5 @@ in a form that FreeAgent can import.
 3. Under *Personal Access*, create a Personal Access Token with the permissions:
   - `account:read`
   - `balance:read`
-  - `transacton:read`
+  - `transaction:read`
 4. Copy the token generated.
